@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    font-size: 14px;
+    background: #f1f1f1;
+}
+
+/* =============== Header =============== */
+
+header{
+    width: 100vw;
+    padding: 20px 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(59, 129, 235);
+}
+
+header>.logo{
+    color: #ffffff;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+header>.btn{
+color: #fff;
+background: rgb(34, 50, 194);
+}
+
+header>.btn:hover{
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.418);
+}
+
+/* =============== User Grid =============== */
+
+.user-grid{
+    width: 80vw;
+    min-width: 300px;
+    margin: 10vh auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 50px;
+}
+
+@media screen and (max-width:1200px){
+    .user-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:780px){
+    .user-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============== User Card =============== */
+.user-card{
+    margin: auto;
+    width: 270px;
+    height: max-content;
+    background: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.274);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.4s all ease-in-out;
+}
+
+.user-card:hover{
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.76);
+}
+
+.user-card>img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 2px 7px 0 #00000046;
+}
+
+.user-card>p{
+    opacity: 0.8;
+}
+
+
+/* =============== Spinner =============== */
+
+.spinner-outer{
+    margin: 10vh auto;
+    width: max-content;
+}
+
+.spinner {
+    -webkit-animation: rotator 1.4s linear infinite;
+            animation: rotator 1.4s linear infinite;
+  }
+  
+  @-webkit-keyframes rotator {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(270deg);
+    }
+  }
+  
+  @keyframes rotator {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(270deg);
+    }
+  }
+  .path {
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+            animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+  }
+  
+  @-webkit-keyframes colors {
+    0% {
+      stroke: #4285F4;
+    }
+    25% {
+      stroke: #DE3E35;
+    }
+    50% {
+      stroke: #F7C223;
+    }
+    75% {
+      stroke: #1B9A59;
+    }
+    100% {
+      stroke: #4285F4;
+    }
+  }
+  
+  @keyframes colors {
+    0% {
+      stroke: #4285F4;
+    }
+    25% {
+      stroke: #DE3E35;
+    }
+    50% {
+      stroke: #F7C223;
+    }
+    75% {
+      stroke: #1B9A59;
+    }
+    100% {
+      stroke: #4285F4;
+    }
+  }
+  @-webkit-keyframes dash {
+    0% {
+      stroke-dashoffset: 187;
+    }
+    50% {
+      stroke-dashoffset: 46.75;
+      transform: rotate(135deg);
+    }
+    100% {
+      stroke-dashoffset: 187;
+      transform: rotate(450deg);
+    }
+  }
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 187;
+    }
+    50% {
+      stroke-dashoffset: 46.75;
+      transform: rotate(135deg);
+    }
+    100% {
+      stroke-dashoffset: 187;
+      transform: rotate(450deg);
+    }
+  }
+
+  /* ================== Display Message ================== */
+  .display-message{
+      margin: 10vh auto;
+      width: 90vw;
+      text-align: center;
+  }
